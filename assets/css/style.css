@@ -1,0 +1,63 @@
+body {
+  width: 100dvw;
+  height: 100dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #111a26;
+  color: white;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+  display: grid;
+  grid: repeat(4, 1fr) / 1fr;
+  gap: 20px;
+  width: max-content;
+  background-color: #18242f;
+  border: 1px solid #18242f;
+  text-align: center;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 5px -6px 12px -1px rgba(0, 0, 0, 0.32);
+}
+.container > div {
+  display: grid;
+  grid: repeat(2, auto) / 1fr;
+  width: max-content;
+  font-size: 40px;
+  font-weight: 500;
+  gap: 10px;
+}
+.input {
+  display: grid;
+  grid: auto / 150px 1fr;
+}
+.error {
+  color: red;
+}
+.hide {
+  visibility: hidden;
+}
+div input {
+  font-size: 40px;
+  width: 400px;
+  height: 50px;
+  border-radius: 40px;
+  text-indent: 20px;
+}
+input:focus-within {
+  outline: none;
+}
+input[type="submit"] {
+  width: 200px;
+  height: 50px;
+  border-radius: 40px;
+  font-size: 20px;
+  font-weight: 500;
+  margin: auto;
+  background-color: #0073f7;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
