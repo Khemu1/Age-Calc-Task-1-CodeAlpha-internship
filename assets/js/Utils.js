@@ -21,7 +21,8 @@ export function validateDate(year, month, day) {
     !Number.isInteger(year) ||
     !Number.isInteger(month) ||
     !Number.isInteger(day) ||
-    year < 1 ||
+    year >= 2024 ||
+    year < 1924 ||
     month < 1 ||
     month > 12 ||
     day < 1
@@ -34,7 +35,6 @@ export function validateDate(year, month, day) {
   const maxDay = new Date(year, month, 0).getDate();
 
   if (day > maxDay) {
-    console.log(maxDay);
     return false;
   }
   return true;

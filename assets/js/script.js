@@ -10,8 +10,10 @@ form.addEventListener("submit", (e) => {
   let day = document.querySelector("#day").value;
   if (utils.validateDate(year, month, day)) {
     let age = utils.calculateAge(year, month, day);
-    result.innerHTML = `You are ${age} years old`;
+    result.innerHTML = `You are ${age} year${age > 1 ? "s" : ""} old`;
     result.classList.remove("hide");
+    result.classList.remove("error");
+
     return;
   } else {
     result.innerHTML = "Please enter a valid date";
